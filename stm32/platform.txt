@@ -115,7 +115,7 @@ recipe.size.regex=\.text\s+([0-9]+).*
 # DFU
 tools.dfu_util.cmd=dfu-util
 tools.dfu_util.cmd.windows=dfu-util-static.exe
-tools.dfu_util.path={runtime.ide.path}/hardware/koduino/stm32/system/dfu-util
+tools.dfu_util.path={runtime.hardware.path}/stm32/system/dfu-util
 
 tools.dfu_util.upload.params.verbose=-v
 tools.dfu_util.upload.params.quiet=
@@ -125,7 +125,7 @@ tools.dfu_util.upload.pattern="{path}/{cmd}" -d 0483:df11 -a 0 -s 0x08000000 -D 
 tools.stm32ld.cmd=stm32ld
 tools.stm32ld.cmd.windows=stm32ld.exe
 tools.stm32ld.cmd.macosx=stm32ld.mac
-tools.stm32ld.path={runtime.ide.path}/hardware/koduino/stm32/system/stm32ld
+tools.stm32ld.path={runtime.hardware.path}/hardware/koduino/stm32/system/stm32ld
 
 tools.stm32ld.upload.params.verbose=
 tools.stm32ld.upload.params.quiet=
@@ -133,10 +133,10 @@ tools.stm32ld.upload.pattern="{path}/{cmd}" {serial.port} {upload.baud} {upload.
 
 # stm32loader
 tools.stm32loader.cmd=stm32loader.py
-tools.stm32loader.path={runtime.ide.path}/hardware/koduino/stm32/system
+tools.stm32loader.path={runtime.hardware.path}/hardware/koduino/stm32/system
 tools.stm32loader.upload.params.verbose=
 tools.stm32loader.upload.params.quiet=
-tools.stm32loader.upload.pattern=python "{path}/{cmd}" -p {serial.port} -b {upload.baud} -y {upload.options} -E {upload.maximum_size} -L {upload.eeplen} -ew "{build.path}/{build.project_name}.bin"
+tools.stm32loader.upload.pattern=c:/python27/python "{path}/{cmd}" -p {serial.port} -b {upload.baud} -y {upload.options} -E {upload.maximum_size} -L {upload.eeplen} -ew "{build.path}/{build.project_name}.bin"
 
 # ST-LINK (Windows)
 tools.stlink.cmd=ST-LINK_CLI.exe
@@ -149,7 +149,7 @@ tools.stlink.upload.pattern="{cmd}" {upload.options} -ME -P "{build.path}/{build
 tools.texanestlink.cmd=st-flash
 tools.texanestlink.cmd.windows=st-flash.exe
 tools.texanestlink.cmd.macosx=st-flash.mac
-tools.texanestlink.path={runtime.ide.path}/hardware/koduino/stm32/system/stlink
+tools.texanestlink.path={runtime.hardware.path}/hardware/koduino/stm32/system/stlink
 
 tools.texanestlink.upload.params.verbose=
 tools.texanestlink.upload.params.quiet=
