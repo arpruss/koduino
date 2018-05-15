@@ -156,7 +156,7 @@ f303v.menu.bootloader.dfu_util.upload.protocol=dfu
 
 ###########################################################
 
-f303c.name=f303c (gRMb, F3 discovery)
+f303c.name=f303c (Franken Blue Pill)
 f303c.build.mcu=STM32F303xC
 f303c.build.series=STM32F30x
 f303c.build.core=arduino
