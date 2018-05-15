@@ -352,10 +352,4 @@ void variantInit() {
   adcCommonInit();
   adcInit(ADC1);
   adcInit(ADC2);
-
-  // USB serial reset cheat
-  pinModeAlt(PA12, GPIO_OType_PP, GPIO_PuPd_DOWN, 4);
-  digitalWrite(PA12, LOW);
-  delayMicroseconds(500);
-  pinMode(PA12, INPUT);
 }
