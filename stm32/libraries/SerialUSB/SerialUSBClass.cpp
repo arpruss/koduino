@@ -16,10 +16,12 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
+#include <Arduino.h>
 #include "SerialUSBClass.h"
 #include "mUSB.h"
 
 void SerialUSBClass::begin(uint32_t baud, uint8_t disconnectPin) {
+  delay(200);
   setUSBDisconnectPin(disconnectPin);
   setUSBBaudRate(baud);
   mUSBInit();
