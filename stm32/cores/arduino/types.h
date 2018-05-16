@@ -108,10 +108,17 @@ typedef enum WiringPinMode {
   PWM_IN, PWM_IN_EXTI
 } WiringPinMode;
 
+#ifdef STRICT_ENUMS
 // Logic levels
 typedef enum LogicValue {
   LOW = 0, HIGH = 1, TOGGLE = 2
 } LogicValue;
+#else
+enum _LogicValue {
+  LOW = 0, HIGH = 1, TOGGLE = 2
+};
+typedef uint32_t LogicValue;
+#endif    
 
 // Timebase
 typedef struct {
